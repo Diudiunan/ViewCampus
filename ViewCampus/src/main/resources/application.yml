@@ -1,0 +1,24 @@
+server:
+  port: 443
+#根据你的ssl修改下面的配置
+  ssl:
+    key-store: keystore.p12
+    key-store-type: PKCS12
+    key-alias: tomcat
+    enabled: true
+    key-store-password: #密码
+#根据你的MySQL数据库情况修改如下配置
+spring:
+  datasource:
+    druid:
+      username: #输入账户名
+      password: #输入密码
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #根据你的情况进行修改url
+      url: jdbc:mysql://localhost:3306/view_campus
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: none
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
