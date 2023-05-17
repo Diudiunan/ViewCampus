@@ -1,0 +1,40 @@
+/* pages/eventCheck/eventCheck.wxss */
+.scrollView{
+  height: 700px;
+}
+.imageView{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Image{
+  height: 120px;
+  border: 1px solid green;
+  border-radius: 50%;
+}
+.textView{
+  margin-top: 1px;
+  border-top: 1px solid rgb(33, 223, 175);
+}
+.tellText{
+  margin-left: 30px;
+}
+.siteText{
+  margin-left: 10px;
+  display: block;
+}
+.textarea{
+  margin-left: 30px;
+  border: 1px solid rgb(93, 233, 116);
+}
+.mapView{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+#map{
+  width: 350px;
+  height: 90%;
+  border: 1px solid rgb(35, 192, 82);
+}

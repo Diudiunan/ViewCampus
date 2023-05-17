@@ -1,0 +1,27 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="UserView">
+    <view class="UserInformation" wx:if="{{UserIsLogin}}">
+      <image class="UserImage" src="{{UserImageSrc}}"></image>
+      <text class="UserName">{{UserName}}</text>
+      <button class="OutButton" bindtap="LogOut">退出</button>
+    </view>
+    <view class="OtherInformation" wx:else>
+      <button class="LoginButton" bindtap="LogIn">登录</button>
+    </view>
+  </view>
+  <view class="SystemSetting">
+    <view class="settingMode">
+      <text class="tipText">仅显示官方活动</text>
+      <switch class="switchMode" checked="{{onlyShowOfficial}}" disabled="{{onlyShowIndividual}}" bindchange="ShowOfficial"/>
+    </view>
+    <view class="settingMode">
+      <text class="tipText">仅显示用户活动</text>
+      <switch class="switchMode" checked="{{onlyShowIndividual}}" disabled="{{onlyShowOfficial}}" bindchange="ShowIndividual"/>
+    </view>
+    <view class="settingMode">
+      <text class="tipText">最近优先推荐</text>
+      <switch class="switchMode" checked="{{nearRecommend}}" bindchange="NearRecommend"/>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+/* pages/message/message.wxss */
+.messageView{
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  margin-top: 2px;
+  height: 40px;
+  border-top: 1px solid rgb(183, 241, 95);
+  border-left: 1px solid rgb(183, 241, 95);
+}
+.messageText{
+  margin-left: 4px;
+}
+.endHintView{
+  border-top: 1px solid hotpink;
+}

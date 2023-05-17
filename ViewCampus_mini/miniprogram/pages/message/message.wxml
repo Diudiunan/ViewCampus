@@ -1,0 +1,11 @@
+<!--pages/message/message.wxml-->
+<view>
+  <scroll-view>
+    <view class="messageView" wx:for="{{messageList}}" wx:key="index">
+      <text class="messageText">{{item}}</text>
+    </view>
+  </scroll-view>
+  <view class="endHintView">
+    <text>没有消息啦</text>
+  </view>
+</view>

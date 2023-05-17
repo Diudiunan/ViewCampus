@@ -1,0 +1,14 @@
+<!--pages/home_search/home_search.wxml-->
+<!--绑定输入事件-->
+<input bindinput="getsuggest" bindconfirm="ChooseSite" value="{{inputtext}}"></input>
+<!--关键词输入提示列表渲染-->
+<view class="TotalViewFrame" wx:for="{{suggestion}}" wx:key="index">
+    <!--绑定回填事件-->
+    <view class="SingleViewFrame">
+    <!--根据需求渲染相应数据-->
+    <!--渲染地址title-->
+    <view class="TitleView" bindtap="backfill" id="{{index}}">{{item.title}}</view>
+    <!--渲染详细地址-->
+    <view class="ItemView">{{item.addr}}</view>
+    </view>
+</view>

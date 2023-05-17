@@ -1,0 +1,54 @@
+<!--pages/events/events.wxml-->
+<view class="">
+  <view class="button_view">
+    <button class="button_change" bindtap="ChangeIsOn">有效活动</button>
+    <button class="button_change" bindtap="ChangeIsOff">无效活动</button>
+  </view>
+  <!--有效活动-->
+  <view class="on_events" wx:if="{{IsOn}}">
+    <scroll-view scroll-y="true">
+      <view wx:for="{{eventslistOn}}" wx:key="index">
+        <view id="{{item[0].eventId}}" data-index="{{index}}" class="event_views" bindtap="LookThisEvent">
+          <image class="event_image" mode="heightFix" src="/images/event_images/me.jpg" show-menu-by-longpress="true">
+          </image>
+          <view class="event_informationView">
+            <text class="event_title">活动：{{item[0].eventName}}</text>
+            <text class="event_sponsor">举办方：{{item[0].eventSponsor}}</text>
+          </view>
+          <view class="ISDOING">
+            <text wx:if="{{item[0].statusApproval==1}}">正在进行</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="EndTextHint">
+      <text>没有了...</text>
+    </view>
+  </view>
+  <!--无效活动-->
+  <view class="off_events" wx:else>
+    <scroll-view scroll-y="true">
+      <view wx:for="{{eventslistOff}}" wx:key="index">
+        <view id="{{item[0].eventId}}" data-index="{{index}}" class="event_views" bindtap="LookThisEvent">
+          <image class="event_image" mode="heightFix" src="/images/event_images/me.jpg" show-menu-by-longpress="true">
+          </image>
+          <view class="event_informationView">
+            <text class="event_title">活动：{{item[0].eventName}}</text>
+            <text class="event_sponsor">举办方：{{item[0].eventSponsor}}</text>
+          </view>
+          <view class="ISDOING">
+            <text wx:if="{{item[0].statusApproval==0}}">未通过</text>
+            <text wx:else>已结束</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="EndTextHint">
+      <text>没有了...</text>
+    </view>
+  </view>
+  <!--添加活动按钮-->
+  <view class="add_event" wx:if="{{ISLOGIN}}">
+    <image class="add_image" mode="aspectFit" src="/images/tabs/add_event.png" bindtap="goToEventAdd"></image>
+  </view>
+</view>

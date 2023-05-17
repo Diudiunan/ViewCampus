@@ -1,0 +1,54 @@
+/* pages/events/events.wxss */
+.button_view{
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_change{
+  display: inline-block;
+  border: 1px solid chartreuse;
+}
+.event_views{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 1px;
+  border-top: 1px solid rgb(93, 233, 116);
+  border-left: 2px solid rgb(93, 233, 116);
+  border-radius: 5px;
+}
+.event_image{
+  height: 120px;
+  display: inline-block;
+}
+.event_informationView{
+  display: inline-block;
+}
+.event_title{
+  display: block;
+  margin-left: 10px;
+}
+.event_sponsor{
+  display: block;
+  margin-left: 10px;
+}
+.ISDOING{
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+.EndTextHint{
+  border-top: 1px solid rgb(168, 55, 55);
+}
+.add_event{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  bottom: 10px;
+}
+.add_image{
+  width: 98%;
+  height: 98%;
+}

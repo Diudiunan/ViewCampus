@@ -1,0 +1,59 @@
+/* pages/home/home.wxss */
+.map_view{
+  position: relative;
+  width: 98%;
+}
+#mymap{
+  top: 2px;
+  left: 2px;
+  width: 100%;
+}
+.control_size{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 1px;
+  right: 1px;
+}
+.control_image{
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  bottom: 1px;
+  right: 1px;
+}
+#search_input{
+  border:1px solid rgb(170, 165, 165);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.scroll_show{
+  height: 310px;
+  width: 350px;
+}
+.recommend_view{
+  width: 370px;
+  height: 110px;
+  border: 1px solid rgb(93, 233, 116);
+}
+.event_views{
+  height: 100px;
+}
+.event_image{
+  width: 96px;
+  height: 54px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.content_view{
+  display: inline-block;
+}
+.event_title{
+  display: block;
+  margin-left: 4px;
+}
+.event_sponsor{
+  display: block;
+  margin-left: 5px;
+}

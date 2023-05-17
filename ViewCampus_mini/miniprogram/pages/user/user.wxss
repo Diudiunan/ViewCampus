@@ -1,0 +1,41 @@
+/* pages/user/user.wxss */
+.UserView{
+  height: 160px;
+}
+.UserInformation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.UserImage{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.OtherInformation{
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SystemSetting{
+  height: 300px;
+  border-top:1px solid rgb(111, 161, 35);
+}
+.settingMode{
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(171, 243, 63);
+}
+.tipText{
+  margin: 10px;
+  font-size: 20px;
+}
+.switchMode{
+  position: absolute;
+  right: 40px;
+}

@@ -1,0 +1,58 @@
+<view>
+<!--地图显示-->
+  <view class="map_view">
+    <map id="mymap"
+    longitude="{{site.longitude}}" latitude="{{site.latitude}}"
+    scale="16" show-location="true"
+    bindtap="GetClick"
+    ></map>
+  </view>
+  <!--活动名-->
+  <view class="event_informationView">
+    <view class="nameView">
+      <text class="hintText">活动名：</text>
+      <input class="nameInput" value="{{event_name}}" bindinput="inputSy"/>
+    </view>
+    <!--时间选择-->
+    <view class="timeView">
+      <text class="hintText">活动时间：</text>
+      <!--日期-->
+      <view class="datePickerView">
+        <view class="dataView">
+          <text class="timeText">开始日期：</text>
+          <picker class="datePicker" mode="date"  start="{{nowDate}}" end="{{acceptSDate}}" bindchange="SDateChange">
+            <text>{{startDate}}</text>
+          </picker>
+        </view>
+        <view class="dataView">
+          <text class="timeText">结束时间：</text>
+          <picker class="datePicker" mode="date"  start="{{nowDate}}" end="{{acceptEDate}}" bindchange="EDateChange">
+            <text>{{endDate}}</text>
+          </picker>
+        </view>
+      </view>
+      <!--时间-->
+      <view class="timePickerView">
+        <picker mode="time" value="07:00" bindchange="STimeChange">{{startTime}}</picker>
+        <picker mode="time" value="17:00" bindchange="ETimeChange">{{endTime}}</picker>
+      </view>
+    </view>
+    <!--坐标选择-->
+    <view class="siteView">
+      <view>
+        <text class="hintText">坐标：</text>
+        <text>(点击地图选点或输入坐标的纬度和经度)</text>
+      </view>
+      <input class="siteInput" placeholder="eg:34.81568,114.35461" value="{{coord}}" bindconfirm="SiteInput"/>
+    </view>
+    <!--活动简介-->
+    <view class="contentView">
+      <text class="hintText">活动简介：</text>
+      <textarea class="text_content" placeholder="介绍一下吧" bindinput="ContentUnput"></textarea>
+    </view>
+  </view>
+  <!--按钮-->
+  <view class="buttonView">
+    <button class="confirmButton" bindtap="ButtonAction">申请活动</button>
+  </view>
+</view>

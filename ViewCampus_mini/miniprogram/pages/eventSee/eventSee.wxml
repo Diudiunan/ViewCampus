@@ -1,0 +1,35 @@
+<!--pages/eventSee/eventSee.wxml-->
+<scroll-view class="scrollView">
+  <view class="imageView">
+    <image class="Image" mode="heightFix" src="/images/event_images/me.jpg"></image>
+  </view>
+  <view>
+    <view class="textView">
+      <text class="tellText">活动名：</text>
+      <text>{{eventList[0].eventName}}</text>
+    </view>
+    <view class="textView">
+      <text class="tellText">活动举办方：</text>
+      <text>{{eventList[0].eventSponsor}}</text>
+    </view>
+    <view class="textView">
+      <text class="tellText">活动地点：</text>
+      <text class="siteText" selectable="true">{{eventList[1].eventSite}}</text>
+    </view>
+    <view class="textView">
+      <text class="tellText">活动开始时间：</text>
+      <text>{{eventList[1].eventStart}}</text>
+    </view>
+    <view class="textView">
+      <text class="tellText">活动结束时间：</text>
+      <text>{{eventList[1].eventEnd}}</text>
+    </view>
+    <view class="textView">
+      <text class="tellText">活动内容：</text>
+      <textarea class="textarea">{{eventList[1].eventContent}}</textarea>
+    </view>
+  </view>
+  <view class="mapView">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{marker}}"></map>
+  </view>
+</scroll-view>

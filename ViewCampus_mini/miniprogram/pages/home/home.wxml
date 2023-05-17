@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<!--上部的固定视图-->
+<view class="map_view" style="height: {{map_view_height}}px;">
+  <!--地图视图-->
+  <map id="mymap" style="height: {{map_view_height}}px;" 
+  longitude="{{site.longitude}}" latitude="{{site.latitude}}" markers="{{map_Markers}}" include-points="{{include_point}}" scale="16" show-location="false"  bindmarkertap="GetEventId"
+  ></map>
+  <!--缩放标志视图-->
+  <view class="control_size" bindtap="controlMapSize">
+    <image class="control_image" src="{{map_size_change?big_image_url:small_image_url}}" ></image>
+  </view>
+</view>
+<!--中部的固定视图-->
+<view id="search_view">
+  <input id="search_input" value="{{inputtext}}" bindinput="inputRespond" bindconfirm="searchEvent"/>
+</view>
+<!--下部的动态视图-->
+<scroll-view class="scroll_show"  scroll-y="true" bindscrolltolower="scrollToLower" style="height: {{score_show_height}}px;">
+  <view class="recommend_view" wx:for="{{eventsList}}" wx:key="index">
+    <view id="{{item.eventId}}" class="event_views" bindtap="LookThisEvent">
+      <image class="event_image" mode="aspectFit" src="/images/event_images/me.jpg" show-menu-by-longpress="true">
+      </image>
+      <view class="content_view">
+        <text class="event_title">活动：{{item.eventName}}</text>
+        <text class="event_sponsor">举办方：{{item.eventSponsor}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
