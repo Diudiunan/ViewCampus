@@ -19,7 +19,7 @@ _项目部署较为简单_
 后端使用了spring boot框架,用maven管理依赖。具体有什么依赖可以看pom.xml文件。你需要根据自己的情况修改application.yml里面的配置。
 (In fact, I think the most important is the back end, with the back end you have a service, regardless of what you use the front end, just ask the service to get data, front-end what you look at the problem 🤭🤭🤭.
 The back end uses the spring boot framework and maven to manage dependencies. You can see what the dependencies are in the pom.xml file. You need to modify the configuration in application.yml according to your own situation.)
-详细请看
+详细请看[ViewCampus_后端部署](https://blog.csdn.net/weixin_46748886/article/details/130738305?spm=1001.2014.3001.5501)
 ## 3.后台管理(Background management)
 后台管理是通过JFrame完成的，界面很简陋，功能很简单，可有可无。毕竟，没有个后台管理系统，指导老师们不好放过你😀😀😀
 使用eclipse打开ViewCampus_ManageSystem，记得给eclipse搞WindowBuilder插件，不然你会后悔看这个后台管理的😅😅😅
