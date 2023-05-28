@@ -32,3 +32,4 @@ Use eclipse to open ViewCampus_ManageSystem, and remember to get a WindowBuilder
 ## 2.预计的项目改进(Possible project improvements)
 我正在考虑改进此项目，改进目标大致为：添加活动过滤、提高软件响应速度、优化代码结构。
 (I am considering improvements to this project, with the general goals of adding activity filtering, improving software responsiveness, and optimizing code structure.)
+# [ViewCampusPlus](https://github.com/Diudiunan/ViewCampusPlus)
